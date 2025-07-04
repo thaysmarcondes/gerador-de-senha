@@ -64,11 +64,12 @@ numeroAleatorio = Math.floor(numeroAleatorio);
 senha = senha + alfabeto[numeroAleatorio];
 }
 campoSenha.value = senha;
-classificaSenha();
+classificaSenha(alfabeto.length);
 }
-function classificaSenha(TamanhoAlfabeto){
-    let entropia = tamanhoSenha * Math.log2(TamanhoAlfabeto);
-    console.log(entropia);                                      
+
+function classificaSenha(tamanhoAlfabeto){
+let entropia = tamanhoSenha * Math.log2(tamanhoAlfabeto);
+console.log(entropia);
 forcaSenha.classList.remove('fraca','media','forte');
 if (tamanhoSenha > 11){
 forcaSenha.classList.add('forte');
